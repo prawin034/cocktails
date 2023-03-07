@@ -1,0 +1,40 @@
+.section_search {
+  display: grid;
+  place-items: center;
+  margin: 5rem auto;
+  &_form {
+    // display: flex;
+  }
+
+  &_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    background-color: #fff;
+    padding: 2rem;
+    &_label {
+      font-size: 3rem;
+      color: #1098ad;
+      font-weight: 900;
+      @include respond(MINI-TAB) {
+        font-size: 2rem;
+      }
+    }
+    &_input {
+      width: 100%;
+      height: 4rem;
+      padding: 1rem;
+      font-size: 2rem;
+      @include respond(MINI-TAB) {
+        height: 5rem;
+      }
+
+      &:focus {
+        background-color: #1098ad;
+        color: #fff;
+        border: none;
+      }
+    }
+  }
+}

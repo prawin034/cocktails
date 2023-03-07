@@ -1,0 +1,32 @@
+.error {
+  margin: 5rem auto;
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+  &_h1 {
+    font-size: 4rem;
+    color: rgb(146, 46, 46);
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  &_p {
+    font-size: 3rem;
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  &_btn {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #072735;
+    padding: 1rem 2rem;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+      background-color: #1e4f64;
+    }
+  }
+}

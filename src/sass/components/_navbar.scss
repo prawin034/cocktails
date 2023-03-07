@@ -1,0 +1,75 @@
+.navbar {
+  //MAIN NAVBAR
+
+  width: 100%;
+  background: linear-gradient(to right, #aecdda, #7499a5, #072735);
+  height: 8rem;
+
+  //NAVBAR CENTER FLEX
+
+  &_center {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include respond(MINI-TAB) {
+      justify-content: space-between;
+      padding: 2rem;
+    }
+    @include respond(MINI) {
+      padding: 0rem;
+    }
+  }
+
+  //LOGO NAVBAR
+  &_logo {
+    &_img {
+      width: 30rem;
+      @include respond(MINI-TAB) {
+        width: 23rem;
+      }
+      @include respond(PHONE) {
+        width: 20rem;
+      }
+      @include respond(MINI) {
+        width: 16rem;
+      }
+    }
+  }
+
+  //LIST NAVBAR
+  &_list {
+    display: flex;
+    gap: 4rem;
+    &_links {
+      list-style: none;
+    }
+
+    &_link {
+      &:link,
+      &:visited {
+        font-size: 2.6rem;
+        color: #fff;
+        font-weight: bold;
+        text-transform: capitalize;
+        text-decoration: none;
+        padding: 1rem;
+        transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        @include respond(MINI-TAB) {
+          font-size: 2.3rem;
+        }
+        @include respond(PHONE) {
+          font-size: 2rem;
+        }
+      }
+      &:hover,
+      &:active {
+        background-color: #072735;
+      }
+
+      &.active {
+        background-color: #1080a5;
+      }
+    }
+  }
+}
